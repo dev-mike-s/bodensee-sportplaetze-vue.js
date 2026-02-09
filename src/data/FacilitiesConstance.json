@@ -1,0 +1,43 @@
+[
+  {
+    "ID": 1,
+    "OfficialFacility": "Schänzle",
+    "Facilities": "none",
+    "Link": "none",
+    "PlaceName": "Schänzle Sportareal",
+    "PlaceType": "Sport-Anlage",
+    "Sports": "Leichtathletik",
+    "Street": "Gustav-Schwab-Straße 14",
+    "City": "Konstanz",
+    "Zipcode": "78467"
+  }, {
+    "ID": 2,
+    "OfficialFacility": "none",
+    "Facilities": [
+      {
+        "SubFacilityId": 1,
+        "FacilityName": "Cherisy Bolzplatz"
+      },
+      {
+        "SubFacilityId": 2,
+        "FacilityName": "Cherisy Basketballplatz"
+      }
+    ],
+    "Link": "none",
+    "PlaceName": "x",
+    "PlaceType": "Sport-Anlage",
+    "Street": "x",
+    "City": "x",
+    "Zipcode": "78467"
+  }, {
+    "ID": 3,
+    "OfficialFacility": "none",
+    "Facilities": "none",
+    "Link": "none",
+    "PlaceName": "Schänzle Sportareal",
+    "PlaceType": "Sportanlage",
+    "Street": "Winterersteig 23",
+    "City": "Konstanz",
+    "Zipcode": 78462
+  }
+]
