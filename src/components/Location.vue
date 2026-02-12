@@ -21,27 +21,49 @@
     </tr>
     </tbody>
   </table>
-
 </template>
 
 <script setup>
+  import { onMounted, reactive, ref } from 'vue';
+  import axios from 'axios';
+  import Facilities from "@/../db.json";
 
-  import {ref} from "vue";
+  const state = reactive({ facilities: [] })
 
-  import FacilitiesConstance from "../data/FacilitiesConstance.json";
+  //const Facilities = ref(null);
 
-  const data = ref(FacilitiesConstance);
 
-  /**
-   * Location properties:
-   * id: int,
-   * address: String
-   */
-  const posts = ref([
-    { id: 1, address: 'Gustav-Schwab-Straße 14, 78467 Konstanz' },
-    { id: 2, address: 'Weiherhofstraße 12, 78467 Konstanz' },
-  ])
 
+  //const { locations, getLocations } = useLocations()
+  //onMounted(() => {
+    //getLocations()
+  //});
+
+  // https://de.vuejs.org/guide/essentials/computed.html denk hier ist die lö
+
+  // https://medium.com/@crisnaxtha/crud-operation-with-vue-js-composite-api-vue-router-and-a-json-server-for-beginner-822cb47693b2
+
+  // try 1
+  //import FacilitiesConstance from "../data/FacilitiesConstance.json";
+  //const data = ref(FacilitiesConstance);
+
+  // try 2
+  //const Data = function() {
+    //return import("../data/FacilitiesConstance");
+  //}
+
+  onMounted(async () =>
+  {
+    try {
+      const response = await axios.get('http://localhost:8080/Facilities');
+      state.facilities = response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  })
+
+
+  console.log(facilities);
 
 </script>
 
@@ -52,16 +74,10 @@
   }
 </style>
 
-<!--
-todo v2 dynamic asynchron data:
 
-// In deiner Home.vue
-const locations = ref([])
+<!-- main src:
 
-onMounted(async () => {
-  // Simuliere Netzwerk-Verzögerung
-  const response = await fetch('/src/data/places.json')
-  const data = await response.json()
-  locations.value = data
-})
+- https://medium.com/@crisnaxtha/crud-operation-with-vue-js-composite-api-vue-router-and-a-json-server-for-beginner-822cb47693b2
+-
+
 -->
