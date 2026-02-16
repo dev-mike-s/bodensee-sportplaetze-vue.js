@@ -1,0 +1,12 @@
+[] = offen;  [o] = in bearbeitung;  [x] = erledigt
+
+frontend:
+[]
+
+backend:
+
+tools:
+
+docs:
+() anforderungen, aufbau (jetzt)
+() coding-convention (später)

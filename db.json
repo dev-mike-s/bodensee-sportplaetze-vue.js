@@ -1,46 +1,51 @@
 {
-  "Facilities":
-  [
+  "facilities": [
     {
-      "ID": 1,
-      "OfficialFacility": "Schänzle",
-      "Facilities": "none",
-      "Link": "none",
-      "PlaceName": "Schänzle Sportareal",
-      "PlaceType": "Sport-Anlage",
-      "Sports": "Leichtathletik",
-      "Street": "Gustav-Schwab-Straße 14",
-      "City": "Konstanz",
-      "Zipcode": "78467"
-    }, {
-    "ID": 2,
-    "OfficialFacility": "Cherisy",
-    "Facilities": [
-      {
-        "SubFacilityId": 1,
-        "FacilityName": "Cherisy Bolzplatz"
+      "id": 1,
+      "parent_id": null,
+      "official_name": "Schänzle",
+      "display_name": "Schänzle Sportareal",
+      "type": "Sport-Anlage",
+      "sports": [
+        "Leichtathletik"
+      ],
+      "address": {
+        "street": "Gustav-Schwab-Straße 14",
+        "zipcode": "78467",
+        "city": "Konstanz"
       },
-      {
-        "SubFacilityId": 2,
-        "FacilityName": "Cherisy Basketballplatz"
-      }
-    ],
-    "Link": "none",
-    "PlaceName": "x",
-    "PlaceType": "Sport-Anlage",
-    "Street": "x",
-    "City": "x",
-    "Zipcode": "78467"
-    }, {
-      "ID": 3,
-      "OfficialFacility": "none",
-      "Facilities": "none",
-      "Link": "none",
-      "PlaceName": "Schänzle Sportareal",
-      "PlaceType": "Sportanlage",
-      "Street": "Winterersteig 23",
-      "City": "Konstanz",
-      "Zipcode": 78462
+      "link": null
+    },
+    {
+      "id": 2,
+      "parent_id": 1,
+      "official_name": "Cherisy",
+      "display_name": "Cherisy Sportplatz Komplex",
+      "type": "Sub-Facility",
+      "sports": [
+        "Fussball",
+        "Basketball"
+      ],
+      "address": {
+        "street": "Cherisy-Straße",
+        "zipcode": "78467",
+        "city": "Konstanz"
+      },
+      "link": null
+    },
+    {
+      "id": 3,
+      "parent_id": null,
+      "official_name": null,
+      "display_name": "Winterersteig Areal",
+      "type": "Sportanlage",
+      "sports": [],
+      "address": {
+        "street": "Winterersteig 23",
+        "zipcode": "78462",
+        "city": "Konstanz"
+      },
+      "link": null
     }
   ]
 }

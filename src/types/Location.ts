@@ -8,7 +8,7 @@ interface Location {
     id: number
     street: string
     city: string
-    zipcode: number
+    zipcode: string
     officialFacility: string
     facilities: string[]
 }
