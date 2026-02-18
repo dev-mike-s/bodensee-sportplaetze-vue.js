@@ -5,8 +5,8 @@
   </h1>
 
   <SearchBar/>
-  <Location
-      v-for="location in Location"
+  <Spot
+      v-for="location in Spot"
       :key="location.id"
       :title="location.address"
   />
@@ -21,7 +21,7 @@ v-for="post in posts"
 
 <script setup>
 import SearchBar from "../components/SearchBar.vue";
-import Location from "../components/Location.vue";
+import Spot from "../components/Spot.vue";
 </script>
 
 <style scoped>

@@ -4,8 +4,8 @@
       "spot_id": 1,
       "parent_id": null,
       "spot_name": "Schänzle Sportareal",
-      "spot_type": "Sport-Anlage",
-      "sport_id": [
+      "type": "Sport-Anlage",
+      "sports": [
         "Leichtathletik"
       ],
       "address_id": {
@@ -20,7 +20,7 @@
       "parent_id": 1,
       "spot_name": "Cherisy Sportplatz Komplex",
       "type": "Sub-Facility",
-      "sport_id": [
+      "sports": [
         "Fussball",
         "Basketball"
       ],
@@ -36,7 +36,7 @@
       "parent_id": null,
       "spot_name": "Winterersteig Areal",
       "type": "Sportanlage",
-      "sport_id": [],
+      "sports": [],
       "address_id": {
         "street": "Winterersteig 23",
         "zipcode": "78462",

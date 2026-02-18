@@ -1,11 +1,10 @@
-
 <template>
-
-  <table class="table-fixed">
+  <h1>Sportanlagen / Plätze:</h1>
+  <table class="table-fixed" id="spots-table">
     <thead>
     <tr>
-      <th>Platzart</th>
-      <th>Adresse</th>
+      <th> {{}} </th>
+      <th> {{ }} </th>
     </tr>
     </thead>
     <tfoot>
@@ -24,9 +23,16 @@
 </template>
 
 <script setup>
-  import { onMounted, reactive, ref } from 'vue';
+  import { defineProps, onMounted, reactive, ref } from 'vue';
   import axios from 'axios';
-  import Facilities from "@/../db.json";
+  import spots from "@/../db.json";
+  import Spot from "@/types/Spot.js";
+
+  const props = defineProps({
+    spot: Spot
+  })
+
+  console.log(spots);
 
   const state = reactive({ facilities: [] })
 
@@ -77,7 +83,7 @@
 
 <!-- main src:
 
-- https://medium.com/@crisnaxtha/crud-operation-with-vue-js-composite-api-vue-router-and-a-json-server-for-beginner-822cb47693b2
+https://medium.com/@crisnaxtha/crud-operation-with-vue-js-composite-api-vue-router-and-a-json-server-for-beginner-822cb47693b2
 -
 
 -->
